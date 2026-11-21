@@ -3,10 +3,10 @@
 	"gd": {
 		"win": "2.2081"
 	},
-	"id": "yourname.gd-boost",
+	"id": "nevq.gd-boost",
 	"name": "GD Boost",
 	"version": "v1.0.0",
-	"developer": "yourname",
+	"developer": "nevq",
 	"description": "System-level performance tuning for Geometry Dash: right GPU, scheduler priority, no power throttling, precise timers. Nothing visual is changed.",
 	"tags": ["performance", "utility"],
 	"settings": {
