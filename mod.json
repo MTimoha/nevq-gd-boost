@@ -1,0 +1,45 @@
+{
+	"geode": "5.11.2",
+	"gd": {
+		"win": "2.2081"
+	},
+	"id": "yourname.gd-boost",
+	"name": "GD Boost",
+	"version": "v1.0.0",
+	"developer": "yourname",
+	"description": "System-level performance tuning for Geometry Dash: right GPU, scheduler priority, no power throttling, precise timers. Nothing visual is changed.",
+	"tags": ["performance", "utility"],
+	"settings": {
+		"gpu-preference": {
+			"type": "bool",
+			"default": true,
+			"name": "Force high-performance GPU",
+			"description": "Tells Windows to run Geometry Dash on your fastest GPU (matters on laptops and PCs with an integrated + dedicated GPU). Takes effect after the next game launch."
+		},
+		"process-priority": {
+			"type": "string",
+			"default": "Above normal",
+			"one-of": ["Normal", "Above normal", "High"],
+			"name": "Process priority",
+			"description": "CPU scheduling priority of the game. 'Above normal' is safe for everyone; 'High' can starve other programs. Requires a restart to change back to Normal."
+		},
+		"disable-throttling": {
+			"type": "bool",
+			"default": true,
+			"name": "Disable power throttling",
+			"description": "Opts the game out of Windows Efficiency Mode (EcoQoS), which can push it onto slow cores or lower clocks and cause stutter."
+		},
+		"timer-resolution": {
+			"type": "bool",
+			"default": true,
+			"name": "1 ms timer resolution",
+			"description": "Makes Windows timers and sleeps accurate to 1 ms, which gives steadier frame pacing."
+		},
+		"main-thread-boost": {
+			"type": "bool",
+			"default": true,
+			"name": "Boost render/logic thread",
+			"description": "Raises the priority of the main game thread and registers it with the Windows multimedia scheduler (MMCSS 'Games' profile)."
+		}
+	}
+}
